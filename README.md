@@ -17,7 +17,7 @@ FlyBot是一个可以部署在[fly.io](https://fly.io)上的Telegram机器人，
 
 fly.io目前提供了Web Cli部署功能，可以直接在浏览器内完成部署。[点击这里](https://fly.io/terminal)进入Web Cli，直接选择你fork的到GitHub上的FlyBot项目即可。
 
-当Web Cli准备完成后，直接点击右侧的**Launch**按钮即可
+当Web Cli准备完成后，直接点击右侧的**flyctl launch**按钮即可。
 
 之后会提示输入如下内容：
 ```
@@ -33,6 +33,14 @@ Wrote config file fly.toml
 - Select organization，默认即可 
 - Select region，这里推荐选美国，日本，新加坡等地区
 - deploy，不要立刻部署，还需要配置一些内容才能保证FlyBot正常运行
+
+> 注意，如果在Web Cli没有显示FlyBot项目，则可以直接点击左侧底部的**Launch Web Cli**按钮，进入终端后，执行如下命令手动触发部署操作:
+
+```
+git clone https://github.com/sunbooshi/FlyBot.git
+cd FlyBot
+flyctl launch
+```
 
 ## 4、配置变量
 
