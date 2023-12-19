@@ -9,5 +9,6 @@ class Config(object):
     WEB_TOKEN = os.environ.get('WEB_TOKEN', '')
     OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
     GPT_MODEL = os.environ.get('GPT_MODEL', 'gpt-3.5-turbo')
+    GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', '')
 
 config = Config()

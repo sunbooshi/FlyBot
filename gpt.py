@@ -17,8 +17,7 @@ def chat_completion(text:str, user:str, conversions:list=[], max_conversion:int=
     messages = []
 
     if max_conversion > 0:
-        if len(conversions) > max_conversion:
-            conversions = conversions[-max_conversion:]
+        conversions = conversions[-max_conversion:]
         messages.extend(conversions)
     
     user_message = build_message(Role.User, text)
