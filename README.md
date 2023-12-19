@@ -1,6 +1,6 @@
 # FlyBot
 
-FlyBot是一个可以部署在[fly.io](https://fly.io)上的Telegram机器人，通过FlyBot你可以直接在Telegram使用chatGPT。另外FlyBot也提供了Web API，可以基于Web API开发自己的chatGPT应用，可以通过fly.io做一次网络中转，避免因openai的地域限制而无法使用chatGPT服务。
+FlyBot是一个可以部署在[fly.io](https://fly.io)上的Telegram机器人，通过FlyBot你可以直接在Telegram使用chatGPT和Google的Gemini。另外FlyBot也提供了Web API，可以基于Web API开发自己的chatGPT应用，可以通过fly.io做一次网络中转，避免因openai的地域限制而无法使用chatGPT服务。
 
 
 # 快速部署
@@ -66,6 +66,7 @@ flyctl secrets set OPENAI_API_KEY="sk-abcdef1234567890"
 flyctl secrets set TEL_BOT_TOKEN="替换为你的机器人Token"
 flyctl secrets set ADMIN_UID="替换为你的user id"
 flyctl secrets set WEB_TOKEN="替换为你的web token"
+flyctl secrets set GOOGLE_API_KEY="替换为你的Google API Key"
 ```
 
 ## 5、部署、启动应用
@@ -85,6 +86,8 @@ fly deploy
 - /help，显示机器人所有命令
 - /chatid，获取当前的会话id
 - /uid，获取用户user id
+- /use，切换gpt和gemini，`/use gpt`,`/use gemini`
+- /reset，重置模型，目前仅对gemini有效
 
 ## Web API
 

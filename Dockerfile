@@ -1,4 +1,4 @@
-FROM python:3.8-slim as base
+FROM python:3.10-slim as base
 
 # Setup env
 ENV LANG C.UTF-8
@@ -11,7 +11,7 @@ FROM base AS python-deps
 
 # Install pipenv and compilation dependencies
 RUN pip install pipenv
-RUN apt-get update && apt-get install -y --no-install-recommends gcc
+RUN apt-get update && apt-get install -y --no-install-recommends gcc git
 
 # Install python dependencies in /.venv
 COPY Pipfile .
